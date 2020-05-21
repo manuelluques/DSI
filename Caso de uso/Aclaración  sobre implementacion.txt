@@ -1,0 +1,1 @@
+No se filtraron las ventas que pertenecían al día anterior porque al no persistir la información, siempre de devolvería un registro vacío. Se optó por mostrar la fecha
