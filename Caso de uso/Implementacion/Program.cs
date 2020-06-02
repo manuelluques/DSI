@@ -113,8 +113,6 @@ namespace AgregarCarrito_openShop
 
                         var venta = new Venta(productos, pago);
 
-
-
                         Ventas.Add(venta);
 
 
@@ -127,25 +125,38 @@ namespace AgregarCarrito_openShop
                     {
                         Console.WriteLine("Pedidos:  ");
 
-                        if (Ventas.Count > 0)
-                        {
+                        bool hayVentas = false;
 
-                            foreach (var item in Ventas)
+                        foreach (var venta in Ventas)
+                        {
+                            if (venta.Preparado == false)
                             {
                                 Console.WriteLine("\n -------------------------------- \n");
-                                Console.WriteLine('>' + item.Fecha.ToShortDateString());
-                                item.Carrito.MostrarCarrito();
-                                item.FormaPago.MostrarFormaPago();
+                                Console.WriteLine('>' + venta.Fecha.ToShortDateString());
+
+                                foreach (var producto in venta.Productos)
+                                {
+                                    var cantidad = producto.Cantidad;
+                                    var nombre = producto.Producto.Nombre;
+                                    Console.WriteLine(cantidad + "x " + nombre);
+
+                                }
+
+                                Console.WriteLine("El total es $" + venta.Total.ToString()); 
+
+                                venta.Preparado = true;
+                                hayVentas = true;
+
                             }
+
                         }
-                        else
-                        {
-                            Console.WriteLine("No se registraron ventas");
-                        }
+
+                        if (!hayVentas) Console.WriteLine("No se registraron ventas");
+
+
 
                         break;
                     }
-
                 default:
                     {
                         Console.WriteLine("La opción ingresada no es válida");
@@ -172,8 +183,8 @@ namespace AgregarCarrito_openShop
 
         public void MostrarFormaPago()
         {
-           
-            Console.WriteLine("\nForma de pago: "+this.Tipo);
+
+            Console.WriteLine("\nForma de pago: " + this.Tipo);
         }
 
     }
@@ -264,19 +275,26 @@ namespace AgregarCarrito_openShop
     class Venta
     {
         public FormasPago FormaPago { get; set; }
-        public Carrito Carrito { get; set; }
+        public List<ProductoEnCarrito> Productos { get; set; }
         public DateTime Fecha { get; set; }
+        public decimal Total { get; set; }
+        public bool Preparado { get; set; }
 
         public Venta(List<ProductoEnCarrito> productos, FormasPago formaPago)
         {
-            Carrito = new Carrito();
+            Productos = productos;
             Fecha = DateTime.Now;
-            FormaPago = formaPago; 
+            FormaPago = formaPago;
 
-            foreach (var item in productos)
+            decimal total = 0;
+
+            foreach (var producto in productos)
             {
-                Carrito.Agregar(item.Producto, item.Cantidad);
+                total = total + producto.Cantidad + producto.Producto.Precio;
             }
+
+            Total = total;
+
         }
 
     }
