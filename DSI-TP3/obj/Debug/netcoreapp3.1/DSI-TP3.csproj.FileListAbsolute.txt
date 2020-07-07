@@ -1,0 +1,11 @@
+C:\Users\usuario\source\DSI\DSI\DSI-TP3\bin\Debug\netcoreapp3.1\DSI-TP3.exe
+C:\Users\usuario\source\DSI\DSI\DSI-TP3\bin\Debug\netcoreapp3.1\DSI-TP3.deps.json
+C:\Users\usuario\source\DSI\DSI\DSI-TP3\bin\Debug\netcoreapp3.1\DSI-TP3.runtimeconfig.json
+C:\Users\usuario\source\DSI\DSI\DSI-TP3\bin\Debug\netcoreapp3.1\DSI-TP3.runtimeconfig.dev.json
+C:\Users\usuario\source\DSI\DSI\DSI-TP3\bin\Debug\netcoreapp3.1\DSI-TP3.dll
+C:\Users\usuario\source\DSI\DSI\DSI-TP3\bin\Debug\netcoreapp3.1\DSI-TP3.pdb
+C:\Users\usuario\source\DSI\DSI\DSI-TP3\obj\Debug\netcoreapp3.1\DSI-TP3.csprojAssemblyReference.cache
+C:\Users\usuario\source\DSI\DSI\DSI-TP3\obj\Debug\netcoreapp3.1\DSI-TP3.AssemblyInfoInputs.cache
+C:\Users\usuario\source\DSI\DSI\DSI-TP3\obj\Debug\netcoreapp3.1\DSI-TP3.AssemblyInfo.cs
+C:\Users\usuario\source\DSI\DSI\DSI-TP3\obj\Debug\netcoreapp3.1\DSI-TP3.dll
+C:\Users\usuario\source\DSI\DSI\DSI-TP3\obj\Debug\netcoreapp3.1\DSI-TP3.pdb
