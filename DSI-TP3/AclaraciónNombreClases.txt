@@ -1,0 +1,2 @@
+La clase Curso hace referencia  a los cursos que se dictan anualmente y de los cuales se guarda registro. 
+La clase DictadoCurso, hace referencia a un Curso al cual ya se le han asignado profesores, horarios, cupos, etc. 
