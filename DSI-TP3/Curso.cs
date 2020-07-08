@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-
+using System;
 namespace DSI_TP3
 {
 
@@ -10,21 +10,16 @@ namespace DSI_TP3
         {
             Nombre = nombre;
             Descripcion = descripcion;
+
         }
 
         public string Nombre { get; }
         public string Descripcion { get; }
-        public List<Profesor> Profesores { get; }
-
-
-        public void AsignarProfesor (Profesor profesor ){
-            
-            
-
+        public void MostrarCurso()
+        {
+            Console.WriteLine($"Curso: {Nombre}");
+            Console.WriteLine($"{Descripcion}");
         }
-
-
-       
 
     }
 }
