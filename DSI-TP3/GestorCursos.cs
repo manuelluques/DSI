@@ -125,7 +125,7 @@ namespace DSI_TP3
             RegistroCursos.MostrarCursos();
             Console.WriteLine("\nIngresar curso: ");
             var cursoIndice = int.Parse(Console.ReadLine()) - 1;
-            Curso curso = RegistroCursos.Cursos[cursoIndice];
+            Curso curso = RegistroCursos.ObtenerCurso(cursoIndice);
             Console.Clear();
 
             Console.WriteLine("Ingresar número de aula: ");
@@ -159,7 +159,7 @@ namespace DSI_TP3
                 RegistroProfesores.MostrarProfesores();
                 Console.WriteLine("\nIngresar profesor: ");
                 var profesorIndice = int.Parse(Console.ReadLine()) - 1;
-                Profesor profesor = RegistroProfesores.Profesores[profesorIndice];
+                Profesor profesor = RegistroProfesores.ObtenerProfesor(profesorIndice);
                 Console.Clear();
 
                 dictadoCurso.AgregarProfesor(profesor);
@@ -197,14 +197,14 @@ namespace DSI_TP3
             }
 
             Console.WriteLine("---------Inscripción---------");
-            Alumno alumno = obtenerAlumno();
+            Alumno alumno = buscarAlumno();
             Console.Clear();
 
             Console.WriteLine("Cursos vigentes: ");
             RegistroDictadoCursos.MostarCursosVigentes();
             Console.WriteLine("\nElegir un curso: ");
             var cursoIndice = int.Parse(Console.ReadLine()) - 1;
-            DictadoCurso dictadoCurso = RegistroDictadoCursos.CursosDictados[cursoIndice];
+            DictadoCurso dictadoCurso = RegistroDictadoCursos.ObtenerCursoDictado(cursoIndice);
             Console.Clear();
 
             var inscripcion = new Inscripcion();
@@ -222,7 +222,7 @@ namespace DSI_TP3
 
 
 
-        static Alumno obtenerAlumno()
+        static Alumno buscarAlumno()
         {
             Console.WriteLine("1.Registrar un nuevo alumno");
             Console.WriteLine("2.Elegir un alumno existente");
@@ -263,7 +263,7 @@ namespace DSI_TP3
                 RegistroAlumnos.MostrarAlumnos();
                 Console.WriteLine("\nElegir alumno: ");
                 var alumnoIndice = int.Parse(Console.ReadLine()) - 1;
-                Alumno alumno = RegistroAlumnos.Alumnos[alumnoIndice];
+                Alumno alumno = RegistroAlumnos.ObtenerAlumno(alumnoIndice);
                 return alumno;
             }
 
@@ -287,7 +287,7 @@ namespace DSI_TP3
 
             Console.WriteLine("\nIndique el curso que desea cancelar: ");
             var cursoIndice = int.Parse(Console.ReadLine()) - 1;
-            RegistroDictadoCursos.CursosDictados[cursoIndice].Vigente = false;
+            RegistroDictadoCursos.CancelarCurso(cursoIndice); 
 
             Console.WriteLine("Cancelado exitósamente");
 
@@ -316,14 +316,14 @@ namespace DSI_TP3
 
             Console.WriteLine("Ingrese el profesor que desea agradar: ");
             RegistroProfesores.MostrarProfesores();
-            var profesorIndice = int.Parse(Console.ReadLine());
-            var profesor = RegistroProfesores.Profesores[profesorIndice];
+            var profesorIndice = int.Parse(Console.ReadLine()) - 1;
+            var profesor = RegistroProfesores.ObtenerProfesor(profesorIndice);
             Console.Clear();
 
-            RegistroDictadoCursos.CursosDictados[cursoIndice].AgregarProfesor(profesor);
+            RegistroDictadoCursos.AgregarProfesorCurso(cursoIndice, profesor);
             Console.WriteLine("Profesor agregado exitósamente");
 
-        }
+         }
 
 
 

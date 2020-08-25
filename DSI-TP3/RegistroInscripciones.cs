@@ -1,22 +1,14 @@
 using System.Collections.Generic;
 
-namespace DSI_TP3
-{
+namespace DSI_TP3 {
     public class RegistroInscripciones {
 
-        public RegistroInscripciones()
-        {
-            Inscripciones = new List<Inscripcion>(); 
+        public void AgregarInscripcion (Inscripcion inscripcion) {
+            var db = GestorBD.ObtenerRegistros ();
+            db.Inscripciones.Add (inscripcion);
+            GestorBD.SobrescribirRegistros (db);
         }
-        public List<Inscripcion> Inscripciones {get; }
-
-
-        public void AgregarInscripcion(Inscripcion inscripcion){
-            Inscripciones.Add(inscripcion); 
-        }
-
-        
 
     }
-    
+
 }

@@ -18,7 +18,8 @@ namespace DSI_TP3
             Vigente = true;
 
         }
-
+        
+       
         public Curso Curso { get; }
         public List<HorarioCurso> HorariosCurso { get; }
         public int AulaId { get; }

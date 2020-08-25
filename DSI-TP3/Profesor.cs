@@ -12,7 +12,7 @@ namespace DSI_TP3
             Dni = dni;
             Email = email;
         }
-
+       
         public string Nombre { get; }
         public string Apellido { get; }
         public double Telefono { get; }

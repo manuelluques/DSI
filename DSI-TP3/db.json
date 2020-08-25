@@ -1,0 +1,111 @@
+{
+  "Alumnos": [
+    {
+      "Nombre": "Manuel",
+      "Apellido": "Luques",
+      "Dni": 42695483.0,
+      "Email": "mlques33@gmail.com",
+      "Telefono": 3564608319.0
+    }
+  ],
+  "Cursos": [
+    {
+      "Nombre": "Literatura Inglesa 101",
+      "Descripcion": "Se explora la obra del autor William Shakespeare"
+    },
+    {
+      "Nombre": "Literatura Catellana",
+      "Descripcion": "Se explora la obra del autor Miguel de Cervantes"
+    }
+  ],
+  "CursosDictados": [
+    {
+      "Curso": {
+        "Nombre": "Literatura Inglesa 101",
+        "Descripcion": "Se explora la obra del autor William Shakespeare"
+      },
+      "HorariosCurso": [
+        {
+          "Dia": "Martes",
+          "HoraInicio": "2020-08-24T17:00:00",
+          "HoraFin": "2020-08-24T18:00:00"
+        }
+      ],
+      "AulaId": 1,
+      "FechaLimiteInscripcion": "2020-12-11T00:00:00",
+      "CupoMinimo": 1,
+      "CupoMaximo": 5,
+      "Vigente": true,
+      "Profesores": [
+        {
+          "Nombre": "Jorge Luis",
+          "Apellido": "Borges",
+          "Telefono": 3564608319.0,
+          "Dni": 6326967.0,
+          "Email": "jl@gmail.com"
+        },
+        {
+          "Nombre": "Adolfo",
+          "Apellido": "Bioy Casáres",
+          "Telefono": 3564698545.0,
+          "Dni": 7326967.0,
+          "Email": "abc@gmail.com"
+        }
+      ]
+    }
+  ],
+  "Inscripciones": [
+    {
+      "Alumno": {
+        "Nombre": "Manuel",
+        "Apellido": "Luques",
+        "Dni": 42695483.0,
+        "Email": "mlques33@gmail.com",
+        "Telefono": 3564608319.0
+      },
+      "DictadoCurso": {
+        "Curso": {
+          "Nombre": "Literatura Inglesa 101",
+          "Descripcion": "Se explora la obra del autor William Shakespeare"
+        },
+        "HorariosCurso": [
+          {
+            "Dia": "Martes",
+            "HoraInicio": "2020-08-24T17:00:00",
+            "HoraFin": "2020-08-24T18:00:00"
+          }
+        ],
+        "AulaId": 1,
+        "FechaLimiteInscripcion": "2020-12-11T00:00:00",
+        "CupoMinimo": 1,
+        "CupoMaximo": 5,
+        "Vigente": true,
+        "Profesores": [
+          {
+            "Nombre": "Jorge Luis",
+            "Apellido": "Borges",
+            "Telefono": 3564608319.0,
+            "Dni": 6326967.0,
+            "Email": "jl@gmail.com"
+          }
+        ]
+      }
+    }
+  ],
+  "Profesores": [
+    {
+      "Nombre": "Jorge Luis",
+      "Apellido": "Borges",
+      "Telefono": 3564608319.0,
+      "Dni": 6326967.0,
+      "Email": "jl@gmail.com"
+    },
+    {
+      "Nombre": "Adolfo",
+      "Apellido": "Bioy Casáres",
+      "Telefono": 3564698545.0,
+      "Dni": 7326967.0,
+      "Email": "abc@gmail.com"
+    }
+  ]
+}

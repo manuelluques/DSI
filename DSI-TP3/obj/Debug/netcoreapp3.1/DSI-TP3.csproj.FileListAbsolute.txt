@@ -9,3 +9,5 @@ C:\Users\usuario\source\DSI\DSI\DSI-TP3\obj\Debug\netcoreapp3.1\DSI-TP3.Assembly
 C:\Users\usuario\source\DSI\DSI\DSI-TP3\obj\Debug\netcoreapp3.1\DSI-TP3.AssemblyInfo.cs
 C:\Users\usuario\source\DSI\DSI\DSI-TP3\obj\Debug\netcoreapp3.1\DSI-TP3.dll
 C:\Users\usuario\source\DSI\DSI\DSI-TP3\obj\Debug\netcoreapp3.1\DSI-TP3.pdb
+C:\Users\usuario\source\DSI\DSI\DSI-TP3\obj\Debug\netcoreapp3.1\DSI-TP3.csproj.CopyComplete
+C:\Users\usuario\source\DSI\DSI\DSI-TP3\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll

@@ -12,7 +12,7 @@ namespace DSI_TP3
             Descripcion = descripcion;
 
         }
-
+   
         public string Nombre { get; }
         public string Descripcion { get; }
         public void MostrarCurso()

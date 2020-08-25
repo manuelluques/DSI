@@ -1,35 +1,28 @@
 using System;
 using System.Collections.Generic;
 
-namespace DSI_TP3
-{
-    public class RegistroAlumnos
-    {
+namespace DSI_TP3 {
+    public class RegistroAlumnos {
 
-        public RegistroAlumnos()
-        {
-            Alumnos = new List<Alumno>();
-
-            Alumnos.Add(new Alumno("Manuel", "Luques", 42695483, "mlques33@gmail.com", 3564608319)); 
-           
-        }
-        public List<Alumno> Alumnos { get; }
-
-
-        public void AgregarAlumno(Alumno alumno)
-        {
-            Alumnos.Add(alumno);
+        public void AgregarAlumno (Alumno alumno) {
+            var db = GestorBD.ObtenerRegistros ();
+            db.Alumnos.Add(alumno);
+            GestorBD.SobrescribirRegistros (db);
         }
 
-        public void MostrarAlumnos()
-        {
-            for (int i = 0; i < Alumnos.Count; i++)
-            {
-                Console.Write("\n"+(i + 1).ToString() + ". ");
-                Alumnos[i].MostrarAlumno();
+        public void MostrarAlumnos () {
+
+            var db = GestorBD.ObtenerRegistros ();
+            for (int i = 0; i < db.Alumnos.Count; i++) {
+                Console.Write ("\n" + (i + 1).ToString () + ". ");
+                db.Alumnos[i].MostrarAlumno ();
             }
         }
 
+           public Alumno ObtenerAlumno(int index ) {
+             var db = GestorBD.ObtenerRegistros ();
+             return db.Alumnos[index]; 
+        }
 
     }
 }

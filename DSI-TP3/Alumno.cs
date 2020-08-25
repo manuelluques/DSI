@@ -1,10 +1,10 @@
 using System; 
 
+
 namespace DSI_TP3
 {
    public class Alumno {
-     
-
+    
 
      public Alumno(string nombre, string apellido, double dni, string email, double telefono)
      {
@@ -15,6 +15,7 @@ namespace DSI_TP3
         Telefono = telefono;
      }
    
+
      public string Nombre {get;}
      public string Apellido {get; } 
      public double Dni {get;}
