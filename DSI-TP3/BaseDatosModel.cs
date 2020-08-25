@@ -2,9 +2,9 @@ using System.Collections.Generic;
 namespace DSI_TP3 {
 
     public  class BaseDatosModel {
-       
-        //Funciona como una interface.
-        //Inicialmente lo declaré así, pero no dejaba 
+  
+      //Podría ser declarado como interface, pero la librería para serializar y deserializar JSON no 
+      // lo permitía
 
         public List<Alumno> Alumnos { get; set; }
         public List<Curso> Cursos { get; set; }

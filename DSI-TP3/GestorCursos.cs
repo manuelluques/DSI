@@ -5,7 +5,8 @@ namespace DSI_TP3
 {
     class GestorCursos
     {
-
+        
+        
         static RegistroCursos RegistroCursos = new RegistroCursos();
         static RegistroDictadoCursos RegistroDictadoCursos = new RegistroDictadoCursos();
         static RegistroProfesores RegistroProfesores = new RegistroProfesores();
